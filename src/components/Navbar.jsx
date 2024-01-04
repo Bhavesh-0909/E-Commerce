@@ -16,6 +16,7 @@ function Navbar() {
         if(loggedin){
             dispatch(toggel());
             toast.error("logged out");
+            navigate("/");
         }
         else{
             navigate("/login")
@@ -45,9 +46,12 @@ function Navbar() {
                 </NavLink>
 
                 { loggedin &&
-                    <div>
-                        <IoCart/>
-                    </div>
+                    <NavLink to="/cart">
+                        <div>
+                            <IoCart/>
+                        </div>
+                    </NavLink>
+                    
                 }
 
                 {
