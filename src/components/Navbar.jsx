@@ -1,11 +1,27 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { IoCart } from "react-icons/io5";
 import logo from "../assets/png-transparent-retail-computer-icons-e-commerce-sales-mega-offer-miscellaneous-service-logo.png"
+import { useDispatch, useSelector } from 'react-redux';
+import { toggel } from '../app/Slices/LoggedSlice';
+import toast from 'react-hot-toast';
 
 function Navbar() {
 
-    const loggedin =false;
+    const loggedin = useSelector((state)=>state.loggedin);
+    const dispatch =useDispatch();
+    const navigate = useNavigate()
+
+    function logginHandler(){
+        if(loggedin){
+            dispatch(toggel());
+            toast.error("logged out");
+        }
+        else{
+            navigate("/login")
+        }
+    }
+
   return (
     <div className='w-full flex justify-center bg-[#0F4C75] text-white'>
 
@@ -36,8 +52,12 @@ function Navbar() {
 
                 {
                     loggedin ? 
-                    (<button>Logout</button>):
-                    (<button className='px-4 py-1 border border-gray-500 rounded-lg text-center'>Login</button>)
+                    (<button className='px-4 py-1 border border-gray-500 rounded-lg text-center'
+                    onClick={logginHandler}
+                    >Logout</button>):
+                    (<button className='px-4 py-1 border border-gray-500 rounded-lg text-center'
+                    onClick={logginHandler}
+                    >Login</button>)
                 }
 
             </div>

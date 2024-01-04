@@ -6,7 +6,7 @@ export const LoggedSlice = createSlice({
     initialState : false,
     reducers :{
         toggel : (state)=>{
-            state = !state;
+            return !state;
         }
     }
 });

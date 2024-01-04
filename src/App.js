@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import LoginPage from "./pages/LoginPage";
-import SingupPage from "./pages/SingupPage";
+import SignupPage from "./pages/SignupPage";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/login" element={<LoginPage/>}/>
-        <Route path="/singup" element={<SingupPage/>}/>
+        <Route path="/signup" element={<SignupPage/>}/>
       </Routes>
     </div>
   );
