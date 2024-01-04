@@ -28,20 +28,20 @@ function LoginPage() {
         navigate("/")
     }
   return (
-    <div className='w-full flex flex-col items-center gap-3'>
+    <div className='w-full flex flex-col items-center gap-3 mt-5 mb-5'>
 
-        <div className='flex flex-col w-1/3 h-[400px] justify-evenly items-center gap-5 mt-10 border rounded-xl shadow-xl py-4 px-2'>
+        <div className='flex flex-col w-1/3 min-w-[300px] h-[400px] justify-evenly items-center gap-1 border rounded-xl shadow-xl py-4 px-2'>
             <div className='flex gap-1 items-center'>
                 <img src={logo} className='w-20 h-20 rounded-full object-cover'/>
                 <span className='text-red-500 font-bold text-3xl'>Store</span>
             </div>
             <form onSubmit={submitHandler}
-            className='flex flex-col gap-3'
+            className='flex flex-col gap-3 w-full items-center px-3'
             >
-                <label className='flex flex-col gap-2'>
+                <label className='flex flex-col gap-2 w-full'>
                     <h3>UserName :</h3>
                     <input
-                        className='border border-black rounded-lg w-80 p-1 px-2'
+                        className='border border-black rounded-lg w-11/12 p-1 px-2'
                         type="text"
                         required
                         placeholder='username'
@@ -50,10 +50,10 @@ function LoginPage() {
                         name="username"
                     />
                 </label>
-                <label className='flex flex-col gap-2'>
+                <label className='flex flex-col gap-2 w-full'>
                     <h3>Password :</h3>
                     <input
-                        className='border border-black rounded-lg w-80 p-1 px-2'
+                        className='border border-black rounded-lg w-11/12 p-1 px-2'
                         type="text"
                         required
                         placeholder='password'
@@ -63,7 +63,7 @@ function LoginPage() {
                     />
 
                 </label>
-                <button className='w-full bg-green-500 text-white font-bold text-center rounded-lg py-2 mt-2'
+                <button className='w-11/12 bg-green-500 text-white font-bold text-center rounded-lg py-2 mt-2'
                 >Log In</button>
             </form>
         </div>

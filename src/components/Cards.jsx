@@ -34,9 +34,9 @@ function Cards({product, index}) {
       <div className='w-full flex justify-between items-center mt-1'>
         <p className='text-blue-500'>{`₹${product.price}`}</p>
         { cart.some(p => p.id == index)?
-          (<button className='px-1 py-1 border bg-red-400 text-white rounded-md'
+          (<button className='px-2 py-1 border bg-red-400 text-white rounded-md'
           onClick={removeCart}>Remove</button>):
-          (<button className='px-4 py-1 border bg-green-400 text-white rounded-md'
+          (<button className='px-5 py-1 border bg-green-400 text-white rounded-md'
           onClick={addCart}>Add</button>)
         }
       </div>
