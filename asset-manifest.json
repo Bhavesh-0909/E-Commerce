@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/E-Commerce/static/css/main.d87ca70b.css",
-    "main.js": "/E-Commerce/static/js/main.027da97a.js",
+    "main.css": "/E-Commerce/static/css/main.6c09648c.css",
+    "main.js": "/E-Commerce/static/js/main.9d055e8c.js",
     "static/media/png-transparent-retail-computer-icons-e-commerce-sales-mega-offer-miscellaneous-service-logo.png": "/E-Commerce/static/media/png-transparent-retail-computer-icons-e-commerce-sales-mega-offer-miscellaneous-service-logo.68a39a60240c45576da5.png",
     "index.html": "/E-Commerce/index.html",
-    "main.d87ca70b.css.map": "/E-Commerce/static/css/main.d87ca70b.css.map",
-    "main.027da97a.js.map": "/E-Commerce/static/js/main.027da97a.js.map"
+    "main.6c09648c.css.map": "/E-Commerce/static/css/main.6c09648c.css.map",
+    "main.9d055e8c.js.map": "/E-Commerce/static/js/main.9d055e8c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d87ca70b.css",
-    "static/js/main.027da97a.js"
+    "static/css/main.6c09648c.css",
+    "static/js/main.9d055e8c.js"
   ]
 }
