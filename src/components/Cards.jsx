@@ -27,7 +27,8 @@ function Cards({product, index}) {
   }
 
   return (
-    <div className='w-[30%] min-w-56 min-h-80 border border-gray-400 rounded-lg hover:shadow-md px-3 py-2 flex flex-col gap-2 justify-center items-center text-center '>
+    <div className='md:w-[30%] w-11/12 min-w-56 min-h-80 border border-gray-400 rounded-lg 
+    hover:shadow-md px-2 py-2 flex flex-col gap-2 justify-center items-center text-center '>
       <h3 className='font-semibold'>{`${product.title.substring(0,11)}`}</h3>
       <p className='text-gray-500 text-xs'>{`${product.description.substring(0,45)}..`}</p>
       <img src={product.image} className='w-8/12 h-3/5 '/>

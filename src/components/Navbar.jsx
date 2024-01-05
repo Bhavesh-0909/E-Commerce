@@ -43,12 +43,12 @@ function Navbar() {
             
             
             <div className={`md:flex md:flex-row md:w-fit md:h-fit h-full w-full flex-col md:static
-             md:z-auto absolute bg-[#0F4C75] md:bg-opacity-100 bg-opacity-50 
-             ${open ? "top-14 left-[50%] right-[50%] z-30" : "-right-10 hidden"} 
+             md:z-auto fixed bg-[#0F4C75] md:bg-opacity-100 bg-opacity-50 
+             ${open ? "top-0 left-[50%] right-[50%] z-30" : "-right-10 hidden"} 
             md:gap-5 md:text-lg md:text-white text-red-500 text-2xl font-semibold items-center transition-all duration-1000 ease-in-out`}>
 
                 <NavLink to="/">
-                    <p className='md:m-0 m-3'>Home</p>
+                    <p className='md:m-0 md:mt-0 mt-20 m-3'>Home</p>
                 </NavLink>
 
                 { loggedin &&
@@ -72,7 +72,7 @@ function Navbar() {
 
             </div>
 
-            <div className='md:hidden flex items-center relative z-50'>
+            <div className='md:hidden flex items-center fixed right-10 top-5 z-50'>
                 {open ? 
                     (<button onClick={()=>setOpen(!open)}><IoCloseSharp/></button>):
                     (<button onClick={()=>setOpen(!open)}><TiThMenu/></button>)}
