@@ -25,7 +25,7 @@ function LoginPage() {
     function submitHandler(){
         dispatch(toggel());
         toast.success(`Welcome ${formdata.username}`)
-        navigate("/")
+        navigate("/home")
     }
   return (
     <div className='w-full flex flex-col items-center gap-3 mt-5 mb-5'>
