@@ -26,7 +26,7 @@ function SignupPage() {
     if(formdata.confirmPassword === formdata.password){
       dispatch(toggel());
       toast.success(`Welcome ${formdata.firstName}`)
-      navigate("/")
+      navigate("/E-Commerce")
     }
     else{
       event.preventDefault();

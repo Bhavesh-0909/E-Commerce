@@ -24,7 +24,7 @@ function Cart() {
         </div>):
         (<div className='w-full flex flex-col items-center justify-center gap-5'>
             <h1 className='text-3xl font-semibold text-green-500'>No items in Cart</h1>
-            <NavLink to="/">
+            <NavLink to="/E-Commerce">
                 <button className='px-10 py-2 bg-green-500 text-white font-semibold rounded-lg'>Start Shopping</button>
             </NavLink>
         </div>)}

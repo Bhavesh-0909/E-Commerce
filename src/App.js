@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
@@ -8,10 +8,10 @@ import SignupPage from "./pages/SignupPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-x-hidden">
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route exact path="/E-Commerce" exact element={<Home/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/signup" element={<SignupPage/>}/>
