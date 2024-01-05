@@ -11,7 +11,7 @@ function App() {
     <div className="App overflow-x-hidden">
       <Navbar/>
       <Routes>
-        <Route exact path="/E-Commerce/" element={<Home/>}/>
+        <Route exact path="/" element={<Home/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/signup" element={<SignupPage/>}/>

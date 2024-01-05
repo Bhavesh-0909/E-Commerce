@@ -31,7 +31,7 @@ function Navbar() {
 
         <div className='flex md:w-8/12 w-9/12 justify-between py-3'>
 
-            <NavLink to="/E-Commerce/">
+            <NavLink to="/">
                 <div className='flex items-center gap-2'>
 
                     <img src={logo} className='w-8 h-8 rounded-full object-cover'/>
@@ -47,7 +47,7 @@ function Navbar() {
              ${open ? "top-0 left-[50%] right-[50%] z-30" : "-right-10 hidden"} 
             md:gap-5 md:text-lg md:text-white text-red-500 text-2xl font-semibold items-center transition-all duration-1000 ease-in-out`}>
 
-                <NavLink to="/E-Commerce/">
+                <NavLink to="/">
                     <p className='md:m-0 md:mt-0 mt-20 m-3'>Home</p>
                 </NavLink>
 
