@@ -11,6 +11,7 @@ import { IoCloseSharp } from "react-icons/io5";
 function Navbar() {
 
     const loggedin = useSelector((state)=>state.loggedin);
+    const cart = useSelector((state)=> state.cart)
     const dispatch =useDispatch();
     const navigate = useNavigate();
     const [open, setOpen]=useState(false);
@@ -19,7 +20,7 @@ function Navbar() {
         if(loggedin){
             dispatch(toggel());
             toast.error("logged out");
-            navigate("/E-Commerce/");
+            navigate("/");
         }
         else{
             navigate("/login")
@@ -53,8 +54,11 @@ function Navbar() {
 
                 { loggedin &&
                     <NavLink to="/cart">
-                        <div className='md:m-0 m-3'>
+                        <div className='md:m-0 m-3 w-fit relative'>
                             <IoCart/>
+                            <div className={` w-3 h-3 rounded-full text-[0.500rem] bg-green-500 
+                            absolute flex justify-center items-center -top-1 -right-1 animate-bounce
+                             ${cart.length == 0 ? "opacity-0" : "opacity-100"}`}>{cart.length}</div>
                         </div>
                     </NavLink>
                     
@@ -72,9 +76,9 @@ function Navbar() {
 
             </div>
 
-            <div className='md:hidden flex items-center fixed right-10 top-5 z-50'>
+            <div className='md:hidden flex items-center static right-10 top-5 z-50'>
                 {open ? 
-                    (<button onClick={()=>setOpen(!open)}><IoCloseSharp/></button>):
+                    (<button onClick={()=>setOpen(!open)} className='fixed'><IoCloseSharp/></button>):
                     (<button onClick={()=>setOpen(!open)}><TiThMenu/></button>)}
             </div>
 
